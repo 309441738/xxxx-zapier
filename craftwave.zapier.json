@@ -1,0 +1,10 @@
+{
+  "title": "xxxx",
+  "description": "xxxx —— 由 CruiseSkillBridge 一键发布的MCP。",
+  "version": "1.0.0",
+  "platformVersion": "15.0.0",
+  "published_with": "craftwave",
+  "authentication": {
+    "type": "oauth2"
+  }
+}
