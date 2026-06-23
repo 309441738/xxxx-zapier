@@ -44,12 +44,18 @@ https://httpbin.org/post
 
 以下 Tools 已纳入 CruiseSkillBridge 发布与统计：
 
-- **freellm_text_to_image** — 
-    文生图：根据文本描述生成图片，返回 CDN URL。
+- **freellm_get_video_status** — 
+    查询 FreeLLM 视频任务状态（配合 freellm_create_video_task 使用）。
 
     Args:
-        prompt: 图片描述（支持中文）
-        size: 尺寸，默认 768x1024（竖屏）
+        task_id: 创建任务返回的 task_id
+        video_id: 可选，创建任务返回的 video_id
+    
+- **freellm_create_video_task** — 
+    仅创建文生视频任务（不等待完成）。返回 task_id / video_id，可用 freellm_get_video_status 轮询。
+
+    Args:
+        prompt: 视频描述
     
 
 > MCP 接入经 CruiseSkillBridge 网关转发，remotes URL 已自动替换，无需手动配置。
